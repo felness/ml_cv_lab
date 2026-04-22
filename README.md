@@ -109,7 +109,6 @@ archive-2/
     ├── images/      # .jpg файлы
     └── masks/       # .bmp файлы
 ```
-
 3. Открыть ноутбук и указать путь к датасету в ячейке с константами:
 
 ```python
@@ -121,8 +120,6 @@ DATA_ROOT = Path("archive-2")
 ```bash
 jupyter notebook suim_segmentation.ipynb
 ```
-
-Запускать ячейки **строго сверху вниз** — ноутбук имеет зависимости между ячейками.
 
 ## Важные замечания
 
@@ -139,6 +136,8 @@ train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_worker
 | CPU / слабая GPU | 4–8 | 1e-3 |
 | GPU 8–16 GB | 16 | 1e-3 |
 | A100 / сильная GPU | 32 | 1e-3 |
+
+В данном ноутбуке обучение происходило на А100
 
 **lr при смене batch_size.** При увеличении batch_size для Adam рекомендуется умеренное масштабирование LR: `lr * sqrt(new_batch / old_batch)`. Нельзя использовать агрессивное линейное масштабирование совместно с Dice Loss — это приводит к деградации модели.
 
