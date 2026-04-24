@@ -1,6 +1,6 @@
 # Семантическая сегментация подводных изображений (SUIM)
 
-Исследование моделей семантической сегментации на датасете SUIM (Semantic Segmentation of Underwater Imagery). Работа выполнена в рамках курсового задания на четвёрку.
+Исследование моделей семантической сегментации на датасете SUIM (Semantic Segmentation of Underwater Imagery).
 
 ## Описание задачи
 
@@ -75,7 +75,7 @@
 ## Требования к окружению
 
 **Python:** 3.9+  
-**CUDA:** 11.8+ (рекомендуется), поддерживается также MPS (Apple Silicon) и CPU
+**CUDA:** 11.8+ 
 
 ## Установка зависимостей
 
@@ -86,12 +86,6 @@ pip install albumentations
 pip install torchmetrics
 pip install matplotlib numpy pillow
 pip install jupyter
-```
-
-Или одной командой:
-
-```bash
-pip install torch torchvision segmentation-models-pytorch albumentations torchmetrics matplotlib numpy pillow jupyter
 ```
 
 ## Подготовка датасета
@@ -112,7 +106,7 @@ archive-2/
 3. Открыть ноутбук и указать путь к датасету в ячейке с константами:
 
 ```python
-DATA_ROOT = Path("archive-2")  
+DATA_ROOT 
 ```
 
 ## Запуск
